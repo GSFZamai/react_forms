@@ -22,11 +22,12 @@ export function DadosPessoais({aoEnviar, cpfValido}) {
             }}
         >
             <TextField
+                required
                 value={nome}
                 id="nome" 
                 label="Nome" 
                 variant="outlined" 
-                margin="normal" 
+                margin="normal"
                 fullWidth
                 onChange={(event) => {               
                     setNome(event.target.value);
