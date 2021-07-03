@@ -6,7 +6,7 @@ import { DadosEntrega } from "./DadosEntrega";
 import { DadosPessoais } from "./DadosPessoais";
 import { DadosUsuarios } from "./DadosUsuario";
 
-export function FormularioCadastro({aoEnviar, cpfValido}) {
+export function FormularioCadastro({aoEnviar}) {
     const [etapaAtual, setEtapaAtual] = useState(0);
     const [dadosAtuais, setDadosAtuais] = useState({});
 
@@ -18,7 +18,7 @@ export function FormularioCadastro({aoEnviar, cpfValido}) {
 
     const formularioAtual = [
         <DadosUsuarios aoEnviar={coletaDados} />,
-        <DadosPessoais aoEnviar={coletaDados} cpfValido={cpfValido}  />,
+        <DadosPessoais aoEnviar={coletaDados}  />,
         <DadosEntrega aoEnviar={coletaDados} />,
         <Typography  variant="h5">Olá, {dadosAtuais.nome}. <br/> Agradecemos por se cadastrar</Typography>
     ]
